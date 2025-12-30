@@ -102,6 +102,10 @@ declare namespace Service {
 	}
 
 	export interface ActionSchema<TThis = Service> {
+		/**
+		 * Timeout of action in milliseconds.  If it’s not defined, the `requestTimeout` value from broker options will be used.
+		 */
+		timeout?: number;
 		name?: string;
 		visibility?: ActionVisibility;
 		params?: ActionParams;
